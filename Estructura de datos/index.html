@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function ordernarNumeros(entrada) {
+            for (var i = 0; i < entrada.length - 1; i++) {
+                var isSwap = false;
+                for (var j = 0; j < entrada.length - i - 1; j++) {
+                    //Intercambiar
+                    if (entrada[j] > entrada[j + 1]) {
+                        var flag = entrada[j];
+                        entrada[j] = entrada[j + 1];
+                        entrada[j + 1] = flag;
+                        isSwap = true;
+                    }
+                }
+                if (!isSwap) // Sin intercambio, asi que deja de ordenar
+                {
+                    break;
+                }
+            }
+        }
+
+
+        var scores = [90, 70, 50, 80, 60, 85];
+        ordernarNumeros(scores);
+        for (var i = 0; i < scores.length; i++) {
+            document.write(scores[i] + ",");
+        }
+    </script>
+</body>
+
+</html>

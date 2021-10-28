@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="news">
+      Hey
+      <div id="container">
+        <h1 id="prueba" class="test">Hello World!</h1>
+      </div>
+      <ul class="listaFrutas">
+        <li id="one" class="frutas"><em> Banana </em></li>
+        <li id="two" class="frutas">Pera</li>
+        <li id="three" class="frutas">Manzana</li>
+        <li id="four" class="frutas">Fresa</li>
+      </ul>
+    </section>
+
+    <h1 id="heading">All about dogs</h1>
+
+    <p>
+      The domestic <span class="animal">dog</span> is known as man's best
+      friend. The <span class="animal">dog</span> was the first domesticated
+      animal and has been widely kept as a working, hunting, and pet companion.
+      According to recent coarse estimates, there are currently between 700
+      million and one billion <span class="animal">dog</span>s, making them the
+      most abundant predators in the world.
+      <a href="http://en.wikipedia.org/wiki/Dog">Read more on Wikipedia</a>.
+    </p>
+
+    <img
+      src="https://www.kasandbox.org/programming-images/animals/dog_sleeping-puppy.png"
+      height="150"
+    />
+
+    <img
+      src="https://www.kasandbox.org/programming-images/animals/dogs_collies.png"
+      height="150"
+    />
+
+    <script>
+      var imageEls = document.getElementsByTagName("img");
+      for (var i = 0; i < imageEls.length; i++) {
+        imageEls[i].src =
+          "https://www.kasandbox.org/programming-images/animals/cat.png";
+      }
+
+      var linkEls = document.querySelectorAll('a[href*="Dog"]');
+      for (var i = 0; i < linkEls.length; i++) {
+        linkEls[i].href = "http://en.wikipedia.org/wiki/Cat";
+      }
+      var headingEl = document.querySelector("#heading");
+      headingEl.innerHTML = "All about cats";
+
+      var nameEls = document.querySelectorAll("p .animal");
+      console.log(nameEls);
+      // NodeList
+      console.log(nameEls[0]);
+      for (var i = 0; i < nameEls.length; i++) {
+        nameEls[i].innerHTML = "cat";
+      }
+    </script>
+
+    <script src="scripts/script1.js"></script>
+  </body>
+</html>

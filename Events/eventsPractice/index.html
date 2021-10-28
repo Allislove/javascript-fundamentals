@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="subtitle"></div>
+    <div class="container">
+        Padre
+        <div class="son">
+            Hijo
+        </div>
+
+    </div>
+
+    <div class="new">
+        THIS IS A DYNAMIC TEXT
+
+    </div>
+
+    <div class="prueba">
+        GAMERS
+
+    </div>
+
+    <div class="prueba2">
+        <div id="prueba3">
+
+        </div>
+    </div>
+
+    <div id="frutas"></div>
+
+    <ol id="lista">
+        <li> Manzana </li>
+        <li> Pera </li>
+        <li> Limon </li>
+
+    </ol>
+
+
+    <script src="js.js"></script>
+    <script src="event2.js"></script>
+    <script src="event3.js"></script>
+    <script src="event4.js"></script>
+
+    <script >
+        //script 1 sin notas de explicacion
+        var span = document.createElement("span");
+        var newSpanText = document.createTextNode("Hello World");
+        span.appendChild(newSpanText);
+        span.setAttribute("align", "center");
+        document.getElementById("prueba3").appendChild(newSpanText);
+
+
+        //script 2 practica >> los tres scripts hacen lo mismo
+        var elem = document.createElement("ul");
+        var textForUl = document.createTextNode('["Manzana", "Pera"]');
+        elem.appendChild(textForUl);
+
+        elem.setAttribute("align", "center");
+        document.getElementById("frutas").appendChild(elem);
+
+
+
+        //script 3 explicado por lineas
+        // crear el elemento
+        var elemento = document.createElement("h2");
+        //cear un nodo de texto
+        var contenido = document.createTextNode("Este es nuestro titular");
+
+        //añadir el nodo de texto al elemento
+        elemento.appendChild(contenido)
+
+        //agregar atributos al elemeto}
+        elemento.setAttribute("align", "center");
+        //agregar el elemento al documento
+        document.getElementById("subtitle").appendChild(elemento);
+    
+    </script>
+
+    <script>
+       //insertBefore
+       var elem = document.createElement("li")
+            newFrutaText = document.createTextNode("Zanahoria");
+
+        elem.appendChild(newFrutaText);
+        var padre = document.getElementsByTagName("li")[0].parentNode;
+        var primerElem = document.getElementsByTagName("li")[0];
+        padre.insertBefore(elem, primerElem);
+        
+
+    </script>
+
+</body>
+</html>

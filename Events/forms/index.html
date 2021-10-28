@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation!</title>
+</head>
+<body>
+
+    <form method="get" action="javascript:void(0)">
+        <label for="username"> Usuario </label>
+        <input type="text" id="username" onblur="checkUsername()" />
+        <!-- En el siguiente div se va a mostrar el mensaje al cliente, si no se cumplen las condiciones! -->
+        <div id="mensajeAqui"></div>
+
+        <label for="email"> Email </label>
+        <input type="text" id="email" />
+
+        <label for="password"> Contraseña </label> <br>
+        <input type="password" id="password" />
+
+        <input type="submit" value="Registrate">
+    </form>
+
+    <!-- Forma 1 -->
+    <!-- <script src="js/form_validation.js"></script> -->
+    <!-- Forma 2 -->
+    <!-- <script src="js/form_validation2.js"></script> -->
+    <!-- Forma 3 -->
+    <!-- <script src="js/using_event_listeners.js"></script> -->
+    Forma 4
+    <script src="js/form_validation4.js"></script>
+
+    
+    
+    
+
+</body>
+</html>

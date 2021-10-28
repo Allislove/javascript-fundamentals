@@ -1,0 +1,26 @@
+body {
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.son {
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 180px;
+    background-color: yellow;
+}
+
+.new, .prueba, .prueba2 {
+    margin: 20px;
+    padding: 20px;
+    width: 180px;
+    height: 180px;
+    background-color: orangered
+}
